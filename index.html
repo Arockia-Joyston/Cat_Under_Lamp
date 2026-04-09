@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat with Lamp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-black">
+    <div class="flex flex-col justify-center items-center h-screen">
+        <img src="assets/bulb-go-off-img.png" class="h-64" id="bulb">
+
+        <img src="assets/cat-eyes-img.webp" class="h-56 pr-6" id="cat">
+
+        <div class="flex gap-[80px] py-10">
+            <button class="bg-white text-black px-8 py-2 rounded-lg" id="OnBtn">ON</button>
+            <button class="bg-white text-black px-8 py-2 rounded-lg" id="OffBtn">OFF</button>
+        </div>
+
+    </div>
+</body>
+<script>
+    let bulb = document.getElementById("bulb")
+    let cat = document.getElementById("cat")
+    let OnBtn = document.getElementById("OnBtn")
+    let OffBtn = document.getElementById("OffBtn")
+
+    OnBtn.addEventListener("click", ()=>{
+        bulb.src = "assets/bulb-go-on-img.webp"
+        cat.src = "assets/cat-img.webp"
+    })
+
+    OffBtn.addEventListener("click", ()=>{
+        bulb.src = "assets/bulb-go-off-img.png"
+        cat.src = "assets/cat-eyes-img.webp"
+    })
+</script>
+</html>
